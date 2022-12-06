@@ -16,15 +16,15 @@
 
 
 #### Link to Planning Trello Board
-[TRELLO BOARD](https://trello.com/b/be1L2bwi/project-2)
+[TRELLO BOARD](https://trello.com/invite/b/be1L2bwi/ATTI61866f5cc6b063d6a9538b9373dced45688C101C/project-2)
 
 
 #### Wireframes
 
-**Desktop**
+#### Desktop
 ![](./public/img/Wireframe%20-%201.png)
 ![](./public/img/Wireframe%20-%202.png)
 ![](./public/img/Wireframe%20-%203.png)
 
-**Mobile**
+#### Mobile
 ![](./public/img/iPhone%208%20Plus%20-%201.png)

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs')  %> 
+<body>
+    <%- include('./partials/header.ejs')  %> 
+    
+    <main>
+        <div class="bulletin-container">
+            <% for(poster of posters) { %> 
+                <div class="poster">
+                    <h3>Lost <%= poster.type %> </h3>
+                    <img src="<%= poster.img  %> ">
+
+                </div>
+
+                <% } %> 
+        </div>
+
+
+    </main>
+    
+</body>
+</html>

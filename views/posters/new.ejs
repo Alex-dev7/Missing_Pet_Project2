@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs')  %> 
+<body>
+    <%- include('../partials/header.ejs')  %> 
+    <h2>Create a new MISSING poster</h2>
+    <main>
+        <div class="form-container">
+
+            <form action="/posters" method="POST">
+                <fieldset>
+                    
+                    <label>Name: <input type="text" name="name"></label>
+                    <label>Location last seen: <input type="text" name="location"></label>
+                    <label>Type: <input type="text" name="type"></label>
+                    <label>Sex: <input type="radio" name="sex" value="Male">
+                                <label for="Male">Male</label><br>
+                                <input type="radio" name="sex" value="Female">
+                                <label for="Female">Female</label><br>
+                                <input type="radio" name="sex" value="Unknown">
+                                <label for="Unknown">Unknown</label><br>
+                    </label>
+                    <label>Image Url: <input type="text" name="img"></label>
+                    <label>Description: <input type="text" name="details"></label>
+                    <label>Status: <input type="checkbox" name="status">Lost</label>
+                    
+                    <label>Owner's phone number: <input type="number" name="number"></label>
+                    <input type="submit" value="Create">
+
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    
+</body>
+</html>

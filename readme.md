@@ -22,8 +22,14 @@
 #### Wireframes
 
 #### Desktop
+
+**Index Page**
 ![](./public/img/Wireframe%20-%201.png)
+
+**SignUp Page**
 ![](./public/img/Wireframe%20-%202.png)
+
+**Create/Post Page**
 ![](./public/img/Wireframe%20-%203.png)
 
 #### Mobile

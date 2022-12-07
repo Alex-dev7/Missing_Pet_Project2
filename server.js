@@ -4,20 +4,12 @@ const express = require('express')
 const morgan = require('morgan')
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
+const Poster = require('./models/posters')
+const PosterRouter = require('./controllers/poster')
 
 
 // create express app
 const app = express()
-
-// connection to mongo
-mongoose.connect(process.env.DATABASE_URL)
-
-
-// mongoose connections
-mongoose.connection
-.on("open", () => console.log("Connected to Mongo"))
-.on("close", () => console.log("Disconnected from Mongo"))
-.on("error", (error) => console.log(error))
 
 
 // register the midleware methods
@@ -26,11 +18,14 @@ app.use("/static", express.static("public"))
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride("_method"))
 
+app.use('/posters', PosterRouter)
+
 
 // Routes
 app.get('/', (req, res) => {
-    res.send("<h1>The server is working</h1>")
+    res.redirect('/posters')
 })
+
 
 
 const PORT = process.env.PORT || 3030

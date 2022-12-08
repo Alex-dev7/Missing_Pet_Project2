@@ -1,0 +1,60 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+
+}
+header{
+    width: 100%;
+    height: 25vh;
+    border: 1px solid black;
+    background-color: rgb(209, 209, 56);
+   
+}
+.nav-container{
+    width: 100%;
+    height: 25%;
+    background-color: rgba(50, 50, 233, 0.317);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+.nav-container ul li{
+    display: inline;
+    margin-right: 3rem;
+
+}
+
+.banner-container {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    
+    align-items: center;
+}
+.banner-container h1 {
+    width: 30%;
+    padding-left: 1rem ;
+    font-size: 3rem;
+}
+.logo-img {
+    margin: 2rem auto 0 auto;
+    
+}
+.text {
+    font-size: 1.2rem;
+    color: rgb(86, 80, 80);
+    width: 30%;
+    text-align: center;
+    line-height: 1.5rem;
+    font-style: italic;
+}
+
+/* index page */
+
+
+/* show page */
+.show-container {
+    margin: 0 auto;
+}

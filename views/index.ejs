@@ -7,11 +7,11 @@
     <main>
         <div class="bulletin-container">
             <% for(poster of posters) { %> 
-                <div class="poster">
+                <a class="poster-cell" href="/posters/<%= poster.id  %> " class="poster">
                     <h3>Lost <%= poster.type %> </h3>
                     <img src="<%= poster.img  %> ">
-
-                </div>
+                   
+                </a>
 
                 <% } %> 
         </div>

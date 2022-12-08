@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs')  %> 
+<body>
+    <%- include('../partials/header.ejs')  %> 
+    
+    <main>
+        <div class="show-container">
+<h1>Please REPORT if you have seen <%= poster.name  %> </h1>
+            <div class="show-poster">
+                <div class="descritption">
+                    <h2>Name: <span><%= poster.name  %> </span></h2>
+                    <h2>Type: <span><%= poster.type  %> </span></h2>
+                    <h2>Sex: <span><%= poster.sex  %> </span></h2>
+                    <h2>Location: <span><%= poster.location  %> </span></h2>
+                    <h2>Status: <span><%= poster.status = poster.status === true ? "LOST" : "FOUND" %></span></h2>
+                    <h2>Description: <span>"<%= poster.details%>"</span></h2>
+                    
+                </div>
+                <div class="img">
+                    <img src="<%= poster.img  %> " alt="this is a image of a <%= poster.type  %> ">
+                    <h2>Please call: <span><%= poster.number %> </span></h2>
+                </div>
+            </div>
+            <button>REPORT</button>
+      
+        </div>
+    </main>
+    
+</body>
+</html>

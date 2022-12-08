@@ -6,26 +6,26 @@
     
     <main>
         <div class="show-container">
-<h1>Please REPORT if you have seen <%= poster.name  %> </h1>
+<h1>Please <a href="#"> <button>REPORT</button></a> if you have seen <%= poster.name  %> </h1>
             <div class="show-poster">
-                <div class="descritption">
+                <div class="description">
                     <h2>Name: <span><%= poster.name  %> </span></h2>
                     <h2>Type: <span><%= poster.type  %> </span></h2>
                     <h2>Sex: <span><%= poster.sex  %> </span></h2>
                     <h2>Location: <span><%= poster.location  %> </span></h2>
-                    <h2>Status: <span><%= poster.status = poster.status === true ? "LOST" : "FOUND" %></span></h2>
+                   
                     <h2>Description: <span>"<%= poster.details%>"</span></h2>
                     
                 </div>
-                <div class="img">
+                <div class="show-img">
+                    <h2>Status: <span class="status"><%= poster.status = poster.status === true ? "LOST" : "FOUND" %></span></h2>
                     <img src="<%= poster.img  %> " alt="this is a image of a <%= poster.type  %> ">
                     <h2>Please call: <span><%= poster.number %> </span></h2>
                 </div>
             </div>
-            <button>REPORT</button>
       
         </div>
     </main>
-    
+    <%- include('../partials/footer.ejs')  %> 
 </body>
 </html>

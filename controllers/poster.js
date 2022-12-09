@@ -86,20 +86,32 @@ router.put('/:id', (req, res) => {
 
 
 // EDIT route
-// router.get('/:id/edit', (req, res) => {
-//     //getting the poster from database
-//     Poster.findById(req.params.id, (err, foundPoster) => {
-//         res.render('posters/edit.ejs', {poster: foundPoster})
+router.get('/:id/edit', (req, res) => {
+    Poster.findById(req.params.id)
+    .then((poster) => {
+        if(req.session.username === poster.username) {
+             //getting the poster from database
+    Poster.findById(req.params.id, (err, foundPoster) => {
+        res.render('posters/edit.ejs', {poster: foundPoster})
 
-//     })
-// })
+    })
+       } else {
+            res.send('you are not authorized to edit this post')
+       }
+        // console.log(poster)
+    })
+    .catch(err => console.log(err))
+    
+})
 
-// router.put('/:id', (req, res) => {
+router.put('/:id', (req, res) => {
 
-//     Poster.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedPoster) => {
-//         res.redirect(`/posters/${req.params.id}`)
-//     })
-// })
+    // req.body.sex = req.body.sex === "on" ? true : false 
+
+    Poster.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedPoster) => {
+        res.redirect(`/posters/${req.params.id}`)
+    })
+})
 
 
 

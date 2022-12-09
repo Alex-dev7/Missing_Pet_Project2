@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs')  %> 
+<body>
+    <%- include('../partials/header.ejs')  %> 
+    <h2>Create a new MISSING poster</h2>
+    <main>
+        <div class="form-container">
+
+            <form action="/posters/<%= poster._id %>?_method=PUT" method="POST">
+                <fieldset>
+                    <p>Edit <%=poster.name  %>: </p>
+                    <label>Name: <input type="text" name="name" value="<%= poster.name %>"></label>
+                    <label>Location last seen: <input type="text" name="location" value="<%= poster.location %>"></label>
+                    <label>Type: <input type="text" name="type" value="<%= poster.type %>"></label>
+                    <label>Sex:
+                                <input type="radio" name="sex" value="Male" <%= poster.sex = poster.sex === "Male" ? "checked" : null %> >
+                                <label for="Male">Male</label><br>
+                                <input type="radio" name="sex" value="Female" <%= poster.sex = poster.sex === "Female" ? "checked" : null %>>
+                                <label for="Female">Female</label><br>
+                                <input type="radio" name="sex" value="Unknown">
+                                <label for="Unknown" <%= poster.sex = poster.sex === "Unknown" ? "checked" : null %>>Unknown</label><br>
+                    </label>
+                    <label>Image Url: <input type="text" name="img" value="<%= poster.img %>"></label>
+                    <label>Description: <input type="text" name="details" value="<%= poster.details %>"></label>
+                    <label>Status 
+                                 <input type="radio" name="status" value="Lost" <%= poster.status = poster.status === "Lost" ? "checked" : null %> >
+                                 <label for="Lost">Lost</label><br>
+                                 <input type="radio" name="status" value="Found" <%= poster.status = poster.status === "Lost" ? "checked" : null %>>
+                                 <label for="Found">Found</label><br>
+
+                    </label>
+                    
+                    <label>Owner's phone number: <input type="number" name="number" value="<%= poster.number %>"></label>
+                    <input type="submit" value="Update">
+
+
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <%- include('../partials/footer.ejs')  %> 
+</body>
+</html>

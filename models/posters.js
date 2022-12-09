@@ -12,9 +12,10 @@ const postersSchema = new Schema ({
     sex: String,
     details: String,
     number: Number,
-    status: Boolean,
+    status: String,
     username: String,
     img: String,
+    reports: Array,
 
 })
 

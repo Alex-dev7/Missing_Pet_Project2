@@ -49,6 +49,7 @@ header{
     text-align: center;
     line-height: 1.5rem;
     font-style: italic;
+    margin-right: 1rem;
 }
 
 /* index page */
@@ -108,6 +109,8 @@ header{
 }
 .show-img img {
     max-height: 500px;
+    max-width: 90%;
+    object-fit: cover;
     margin: 1rem;
     border: 1px solid black;
 }

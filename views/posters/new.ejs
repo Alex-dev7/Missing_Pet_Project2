@@ -22,7 +22,12 @@
                     </label>
                     <label>Image Url: <input type="text" name="img"></label>
                     <label>Description: <input type="text" name="details"></label>
-                    <label>Status: <input type="checkbox" name="status">Lost</label>
+                    <label>Status:  <input type="radio" name="status" value="Lost">
+                                    <label for="Lost">Lost</label><br>
+                                    <input type="radio" name="status" value="Found">
+                                    <label for="Found">Found</label><br>
+
+                    </label>
                     
                     <label>Owner's phone number: <input type="number" name="number"></label>
                     <input type="submit" value="Create">

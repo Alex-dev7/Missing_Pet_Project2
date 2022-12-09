@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs')  %> 
+<body>
+    <%- include('../partials/header.ejs')  %> 
+    
+    <main>
+        <div class="show-container">
+
+            <div class="show-poster">
+               <form  action="/posters/<%= id  %> /?_method" method="POST"></form>
+                     <label>Name: <input type="text" name="reports"></label>
+                     <label>Message: <input type="text" name="reports.message"></label>
+                    
+                     <input type="submit" value="Send">
+            </div>
+      
+        </div>
+    </main>
+    <%- include('../partials/footer.ejs')  %> 
+</body>
+</html>

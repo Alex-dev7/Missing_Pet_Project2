@@ -32,8 +32,9 @@ app.use('/user', UserRouter)
 
 
 // Routes
-app.get('/', (req, res) => {
-    res.redirect('/posters')
+app.get('/', (req, res) => {  
+        res.redirect('/posters')
+  
 })
 
 

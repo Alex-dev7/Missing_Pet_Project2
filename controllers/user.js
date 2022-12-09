@@ -59,7 +59,7 @@ router.post('/login', (req, res) => {
 
 // profile route
 router.get('/profile', (req, res) => {
-
+    
     // console.log(req.session.username)
    
     res.render('user/profile.ejs', {

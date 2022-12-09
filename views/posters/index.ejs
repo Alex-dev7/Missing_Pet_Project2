@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs')  %> 
+<body>
+    <%- include('../partials/header.ejs')  %> 
+    
+    <main>
+        <div class="bulletin-container">
+            <% for(poster of posters) { %> 
+                <a class="poster-cell" href="/posters/<%= poster.id  %> " class="poster">
+                    <h3>Lost <%= poster.type %> </h3>
+                    <img src="<%= poster.img  %> ">
+                   
+                </a>
+                <%  %> 
+                <form action="/posters/<%= poster._id   %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete" id="form-button">
+             </form>
+
+                <% } %> 
+        </div>
+
+
+
+    </main>
+    
+</body>
+</html>

@@ -2,19 +2,20 @@
 <html lang="en">
 <%- include('./partials/head.ejs')  %> 
 <body>
-    <%- include('./partials/header.ejs')  %> 
+    <%- include('./partials/header-login.ejs')  %> 
     
     <main>
         <div class="bulletin-container">
             <% for(poster of posters) { %> 
-                <a class="poster-cell" href="/posters/<%= poster.id  %> " class="poster">
+                <a class="poster-cell" href="/user/login" class="poster">
                     <h3>Lost <%= poster.type %> </h3>
                     <img src="<%= poster.img  %> ">
-                   
+                    <div>REPORT Pet</div>
                 </a>
 
                 <% } %> 
         </div>
+
 
 
     </main>

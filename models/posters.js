@@ -16,7 +16,7 @@ const postersSchema = new Schema ({
     username: String,
     img: String,
     reports: Array,
-
+    
 })
 
 // poster model

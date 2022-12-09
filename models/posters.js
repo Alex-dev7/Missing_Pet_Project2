@@ -15,7 +15,9 @@ const postersSchema = new Schema ({
     status: String,
     username: String,
     img: String,
-    reports: Array,
+    reports: {
+        message: String,
+    },
     
 })
 

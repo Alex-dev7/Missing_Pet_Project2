@@ -5,14 +5,17 @@
     <%- include('../partials/header.ejs')  %> 
     
     <main>
-        <div class="show-container">
+        <div class="report-container">
 
-            <div class="show-poster">
-               <form  action="/posters/<%= id  %> /?_method" method="POST"></form>
-                     <label>Name: <input type="text" name="reports"></label>
-                     <label>Message: <input type="text" name="reports.message"></label>
-                    
+            <div class="report-poster">
+               <form  action="/posters/<%= poster._id%>?_method=PUT" method="POST">
+                    <!-- <label>Name: <input type="text" name="reports"></label>
+                     <label>Message: <input type="text" name="reports.message"></label> -->
+                    <input type="text" name="reports.message">
                      <input type="submit" value="Send">
+            
+            </form>
+
             </div>
       
         </div>

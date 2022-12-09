@@ -44,10 +44,7 @@ router.get('/', (req, res) => {
 
 
 
-// Report route
-router.get('/report', (req, res) => {
-    res.render('posters/report.ejs')
-})
+
 
 
 
@@ -71,24 +68,38 @@ router.post('/', (req, res) => {
 })
 
 
-
-
-
-// EDIT route
-router.get('/:id/edit', (req, res) => {
+// Report route
+router.get('/:id/report', (req, res) => {
+    console.log(`----------------- ${req.params.id}`)
     //getting the poster from database
     Poster.findById(req.params.id, (err, foundPoster) => {
-        res.render('posters/edit.ejs', {poster: foundPoster})
+        res.render('posters/report.ejs', {poster: foundPoster})
 
     })
 })
-
 router.put('/:id', (req, res) => {
 
     Poster.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedPoster) => {
-        res.redirect(`/posters/${req.params.id}`)
+        res.redirect(`/posters`)
     })
 })
+
+
+// EDIT route
+// router.get('/:id/edit', (req, res) => {
+//     //getting the poster from database
+//     Poster.findById(req.params.id, (err, foundPoster) => {
+//         res.render('posters/edit.ejs', {poster: foundPoster})
+
+//     })
+// })
+
+// router.put('/:id', (req, res) => {
+
+//     Poster.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedPoster) => {
+//         res.redirect(`/posters/${req.params.id}`)
+//     })
+// })
 
 
 

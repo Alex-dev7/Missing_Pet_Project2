@@ -5,12 +5,13 @@
     <%- include('../partials/header.ejs')  %> 
     
     <main>
-        <div class="bulletin-container">
+        <div class="bulletin-container snaps-inline">
             <% for(poster of posters) { %> 
                 <a class="poster-cell" href="/posters/<%= poster.id  %> " class="poster">
                     <h3 class="status"><%= poster.status  %> <%= poster.type %> </h3>
                     <img src="<%= poster.img  %> ">
-                    <div>REPORT</div>
+                    <div class="view">VIEW</div>
+                    <div>⚠️ REPORT ⚠️</div>
                 </a>
                 <%  %> 
 

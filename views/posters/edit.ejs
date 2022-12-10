@@ -24,10 +24,10 @@
                     <label>Image Url: <input type="text" name="img" value="<%= poster.img %>"></label>
                     <label>Description: <input type="text" name="details" value="<%= poster.details %>"></label>
                     <label>Status 
-                                 <input type="radio" name="status" value="Lost" <%= poster.status = poster.status === "Lost" ? "checked" : null %> >
-                                 <label for="Lost">Lost</label><br>
-                                 <input type="radio" name="status" value="Found" <%= poster.status = poster.status === "Lost" ? "checked" : null %>>
-                                 <label for="Found">Found</label><br>
+                                 <input type="radio" name="status" value="LOST" <%= poster.status = poster.status === "LOST" ? "checked" : null %> >
+                                 <label for="Lost">LOST</label><br>
+                                 <input type="radio" name="status" value="FOUND" <%= poster.status = poster.status === "FOUND" ? "checked" : null %>>
+                                 <label for="Found">FOUND</label><br>
 
                     </label>
                     

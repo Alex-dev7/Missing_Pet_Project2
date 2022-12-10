@@ -5,7 +5,7 @@
     <%- include('./partials/header-login.ejs')  %> 
     
     <main>
-        <div class="bulletin-container">
+        <div class="bulletin-container snaps-inline">
             <% for(poster of posters) { %> 
                 <a class="poster-cell" href="/user/login">
                     <h3 class="status"> <%= poster.status poster.type %> </h3>

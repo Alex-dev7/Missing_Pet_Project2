@@ -54,6 +54,38 @@ header{
 
 /* index page */
 
+.bulletin-container {
+    margin: 5rem auto 0 auto;
+    max-width: 80%;
+    height: auto;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+}
+.poster-cell {
+    height: 430px;
+    width: 300px;
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    
+    
+}
+.poster-cell h3 {
+    width: 100%;
+    height: 10%;
+    color: white;
+    text-align: center;
+}
+.poster-cell img {
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+   
+}
 
 /* show page */
 .show-container {

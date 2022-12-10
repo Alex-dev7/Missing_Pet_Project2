@@ -3,27 +3,44 @@ body {
     width: 100vw;
     box-sizing: border-box;
     font-family: 'Readex Pro', sans-serif;
+    background-color: rgba(240, 255, 255, 0.566);
+    background-size: cover;
+    
 }
 header{
     width: 100%;
-    height: 25vh;
-    border: 1px solid black;
-    background-color: rgb(209, 209, 56);
-   
+    height: 26vh;
+    
+    /* border: 1px solid black; */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1683' height='400' preserveAspectRatio='none' viewBox='0 0 1683 400'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1707%26quot%3b)' fill='none'%3e%3crect width='1683' height='400' x='0' y='0' fill='rgba(24%2c 106%2c 59%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c403.026C74.727%2c384.933%2c146.031%2c368.152%2c215.709%2c335.649C295.726%2c298.323%2c395.848%2c277.719%2c436.57%2c199.375C477.435%2c120.756%2c445.193%2c24.8%2c421.688%2c-60.63C400.426%2c-137.906%2c350.376%2c-198.911%2c308.23%2c-267.083C257.112%2c-349.767%2c237.211%2c-465.272%2c147.857%2c-503.555C58.476%2c-541.85%2c-40.613%2c-483.454%2c-134.065%2c-456.582C-228.064%2c-429.552%2c-344.134%2c-426.796%2c-399.494%2c-346.163C-454.897%2c-265.468%2c-408.7%2c-156.439%2c-407.331%2c-58.565C-406.198%2c22.447%2c-409.29%2c99.901%2c-392.147%2c179.087C-370.799%2c277.699%2c-382.825%2c409.32%2c-295.209%2c459.354C-206.418%2c510.059%2c-99.378%2c427.088%2c0%2c403.026' fill='%23104526'%3e%3c/path%3e%3cpath d='M1683 815.817C1779.459 823.804 1878.935 882.442 1966.375 840.941 2054.814 798.9649999999999 2091.38 694.077 2129.486 603.903 2166.695 515.85 2209.424 419.992 2183.092 328.098 2157.4610000000002 238.649 2065.561 189.947 1993.87 130.63 1933.408 80.60300000000001 1871.017 37.321000000000026 1797.734 9.25200000000001 1719.028-20.894000000000005 1638.1-48.29199999999997 1554.491-37.661 1462.342-25.944000000000017 1378.828 16.341000000000008 1304.441 71.97699999999998 1215.335 138.62099999999998 1084.94 202.664 1084.396 313.93399999999997 1083.8319999999999 429.3 1235.028 480.055 1301.988 574.002 1352.487 644.8530000000001 1354.799 749.762 1428.259 796.385 1501.647 842.962 1596.375 808.644 1683 815.817' fill='%23208f50'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1707'%3e%3crect width='1683' height='400' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-size: cover;
 }
 .nav-container{
+ 
+   
     width: 100%;
     height: 25%;
-    background-color: rgba(50, 50, 233, 0.317);
+  
+    background-color: rgba(50, 50, 233, 0.149);
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
+    
 }
+.nav-container ul a {
+   text-decoration: none;
+   
+}
+
 .nav-container ul li{
     display: inline;
     margin-right: 3rem;
-
+    color:black;
+    font-size: 1.3rem;
+}
+.nav-container ul li:hover {
+    color: white;
+    text-decoration: underline red;
 }
 
 .banner-container {
@@ -38,7 +55,7 @@ header{
     padding-left: 1rem ;
     font-size: 5rem;
     font-family: 'Concert One', cursive;
-    color: rgb(103, 161, 212);
+    color: rgba(255, 255, 255, 0.89);
     
 }
 .logo-img {
@@ -49,7 +66,7 @@ header{
 }
 .text {
     font-size: 1.2rem;
-    color: rgb(86, 80, 80);
+    color: rgb(195, 189, 189);
     width: 30%;
     text-align: center;
     line-height: 1.5rem;
@@ -60,35 +77,29 @@ header{
 /* index page */
 
 .bulletin-container {
+
+    width: 90%;
     margin: 5rem auto 0 auto;
-    padding: 0 3rem 0 3rem;
-    height: 50vh;
-    border: 1px solid black;
-    display: grid;
-    background-color: rgba(146, 146, 146, 0.493);
-    grid-auto-flow: column;
-    grid-auto-columns: 20%;
-    gap: 5rem;
+    padding: 3rem;
+    height: auto;
+ 
+    display: flex;
+   background-color: rgba(7, 110, 7, 0.321);
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
     align-items: center;
+    justify-content: space-evenly;
     
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-}
-.snaps-inline {
-    scroll-snap-type: inline mandatory;
-    scroll-padding-inline: 4rem;
-}
-.snaps-inline > * {
-    scroll-snap-align: end;
-    
+ 
 }
 .poster-cell {
     position: relative;
     padding: 1rem;
     height: 430px;
-    min-width: 300px;
+    max-width: 290px;
     border: 1px solid black;
-    background-color: rgba(238, 155, 38, 0.758);
+    background-color: #7ed5e1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,6 +112,7 @@ header{
     height: 10%;
     color: white;
     text-align: center;
+    padding: 1rem;
 }
 .poster-cell img {
     padding: 1rem;
@@ -109,19 +121,20 @@ header{
     object-fit: cover;
     /* opacity: 1; */
     transition: .5s ease;
-    /* backface-visibility: hidden; */
+    border-radius: 10%;
    
 }
 .view {
-   
+    font-size: 1.1rem;
+    border-radius: 6%;
     transition: .5s ease;
     opacity: 0;
     max-width: 90%;
-    min-height: 65.5%;
+    min-height: 62%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -47.5%);
+    transform: translate(-50%, -44.5%);
     /* -ms-transform: translate(-50%, -50%); */
     
     background-color: rgba(3, 3, 3, 0.704);
@@ -140,9 +153,38 @@ header{
   width: 100%;
   text-align: center;
   padding-top: .1rem;
-  
+  color: rgb(0, 42, 5);
+}
+.poster-cell div:hover {
+    color: red;
 }
 
+@media (max-width: 768px) {
+    .bulletin-container {
+        margin: 5rem auto 0 auto;
+        padding: 0 3rem 0 3rem;
+        height: 50vh;
+        border: 1px solid black;
+        display: grid;
+        background-color: rgba(146, 146, 146, 0.493);
+        grid-auto-flow: column;
+        grid-auto-columns: 20%;
+        gap: 5rem;
+        align-items: center;
+        
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+    }
+    .snaps-inline {
+        scroll-snap-type: inline mandatory;
+        scroll-padding-inline: 4rem;
+    }
+    .snaps-inline > * {
+        scroll-snap-align: end;
+        
+    }
+
+}
 
 /* show page */
 .show-container {
@@ -203,3 +245,14 @@ header{
     margin: 1rem;
     border: 1px solid black;
 }
+
+/* profile */
+
+.profile-container {
+    margin: 5rem auto;
+    width: 80%;
+    height: 60vh;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} 

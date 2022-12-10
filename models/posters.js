@@ -15,9 +15,10 @@ const postersSchema = new Schema ({
     status: String,
     username: String,
     img: String,
-    reports: {
+    reports: [{
+        name: String,
         message: String,
-    },
+    }],
     
 })
 

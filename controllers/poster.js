@@ -115,8 +115,6 @@ router.put('/:id', (req, res) => {
 
 
 
-
-
 // SHOW route
 router.get('/:id', (req, res) => {
     Poster.findById(req.params.id)

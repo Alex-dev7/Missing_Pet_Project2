@@ -8,9 +8,10 @@
         <div class="bulletin-container snaps-inline">
             <% for(poster of posters) { %> 
                 <a class="poster-cell" href="/user/login">
-                    <h3 class="status"> <%= poster.status poster.type %> </h3>
+                    <h3 class="status"> <%= poster.status  %> <%= poster.type %>  </h3>
                     <img src="<%= poster.img  %> ">
-                    <div>REPORT Pet</div>
+                    <div class="view">view</div>
+                    <div>⚠️ REPORT ⚠️</div>
                 </a>
 
                 <% } %> 

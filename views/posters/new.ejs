@@ -3,17 +3,18 @@
 <%- include('../partials/head.ejs')  %> 
 <body>
     <%- include('../partials/header.ejs')  %> 
-    <h2>Create a new MISSING poster</h2>
+    <a  href="/user/profile"><button id="back">&#10153;</button></a>
+    <h2 class="missing-text">Create a new MISSING poster</h2>
     <main>
-        <div class="form-container">
+        <div class="">
 
             <form action="/posters" method="POST">
-                <fieldset>
+                <fieldset class="form-container">
                     
                     <label>Name: <input type="text" name="name"></label>
                     <label>Location last seen: <input type="text" name="location"></label>
                     <label>Type: <input type="text" name="type"></label>
-                    <label>Sex: <input type="radio" name="sex" value="Male">
+                    <label>Sex: <br> <input type="radio" name="sex" value="Male">
                                 <label for="Male">Male</label><br>
                                 <input type="radio" name="sex" value="Female">
                                 <label for="Female">Female</label><br>
@@ -22,7 +23,7 @@
                     </label>
                     <label>Image Url: <input type="text" name="img"></label>
                     <label>Description: <input type="text" name="details"></label>
-                    <label>Status:  <input type="radio" name="status" value="LOST">
+                    <label>Status: <br>  <input type="radio" name="status" value="LOST">
                                     <label for="LOST">LOST</label><br>
                                     <input type="radio" name="status" value="FOUND">
                                     <label for="FOUND">FOUND</label><br>

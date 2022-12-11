@@ -31,6 +31,16 @@ header{
    text-decoration: none;
    
 }
+#logout-button {
+    padding: .3rem;
+    width: 3rem;
+   min-height: 3rem;
+  background-image: url(./img/ri_logout-box-r-fill.svg);
+ background-size: contain;
+  background-repeat: no-repeat;
+  color: transparent;
+  
+}
 
 .nav-container ul li{
     display: inline;
@@ -135,7 +145,7 @@ header{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -44.5%);
-    /* -ms-transform: translate(-50%, -50%); */
+  
     
     background-color: rgba(3, 3, 3, 0.704);
     display: flex;
@@ -251,8 +261,69 @@ header{
 .profile-container {
     margin: 5rem auto;
     width: 80%;
-    height: 60vh;
+    height: auto;
     border: 1px solid black;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    border-radius: 18px;
+    padding: 3rem;
+   background-color:#12641aa7;
+   
 } 
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+   justify-content: space-between;
+}
+.item h2 {
+    font-size: 1.7rem;
+}
+.item a button {
+    padding: 1rem;
+    font-size: 1.2rem;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #4ab131 0, #21a062 100%);
+   border: 0;
+   border-radius: 6px;
+   cursor: pointer;
+   color: #fff;
+   box-shadow: -3px 3px 12px 1px #000;
+}
+.item a button:hover {
+  transform: translateY(-3px);
+}
+.item a button:active {
+  box-shadow: #3ce075 0 3px 7px inset;
+  transform: translateY(2px);
+}
+.item .reports {
+    position: relative;
+    border: 1px solid black;
+    box-shadow: -3px 3px 12px 1px #000;
+    background-color: rgba(15, 15, 82, 0.402);
+    border-radius: 10px;
+    width: 80%;
+    padding: 1rem;
+    line-height: 1.5rem;
+
+}
+.message-card {
+    
+    background-color: grey;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem;
+    
+    
+}
+.message-card span {
+    color: rgb(57, 55, 55);
+}
+#count {
+  color:white;
+  background-color: tomato;
+  padding: .2rem .4rem;
+  border: .1px solid black;
+  border-radius: 10%;
+
+}

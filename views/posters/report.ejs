@@ -9,8 +9,9 @@
 
             <div class="report-poster">
                <form  action="/posters/<%= poster._id%>?_method=PUT" method="POST">
-                    <label>Name: <input type="text" name="reports.name"></label>
-                     <label>Message: <input type="text" name="reports.message"></label>
+                    <label>Name: <input type="text" name="name"></label>
+                     <label>Message: <input type="text" name="message"></label>
+                     <label>Contact Info: <input type="text" name="contactInfo"></label>
                     
                      <input type="submit" value="Send">
             

@@ -18,6 +18,7 @@ const postersSchema = new Schema ({
     reports: [{
         name: String,
         message: String,
+        contactInfo: String,
     }],
     
 })

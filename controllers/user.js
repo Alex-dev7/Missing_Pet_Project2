@@ -63,32 +63,19 @@ router.post('/login', (req, res) => {
 router.get('/profile', (req, res) => {
     
     // console.log(req.session.username)
-  
-   
-    
-        
+
         Poster.find({username: req.session.username})
     .then((posters) => {
         
-             
-            //  const {reports} = posters 
-            // const arr = []
-            // for(let poster of posters) {
-            //      arr.push(posters)
-            // }
-            
-            // console.log('----------------------------------' + arr[1])
              res.render('user/profile.ejs', {
                 user: req.session.username,
                 posters: posters
 
              })
-       
-        
     })
     .catch(err => console.log(err)) 
         
-    } )
+} )
 
 
 

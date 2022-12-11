@@ -3,30 +3,38 @@
 <%- include('../partials/head.ejs')  %> 
 <body>
     <%- include('../partials/header.ejs')  %> 
-    <a id="logout-button" href="/user/logout"><button>Logout</button></a>
+    
+    <a  href="/posters"><button>Back</button></a>
     <main>
         <div class="profile-container">
-            <div><h2>Hello, <%=  user %> </h2>
-            <div class="reports">
-                <% for(let i=0; i < posters.length; i++) { 
-                    const reports = posters[i].reports
-                    for(let j=0; j < reports.length; j++) {
-                   %>
-                    
-                             <p class="name"><%= reports[j].name%>  </p>
-                              <p class="message"><%= reports[j].message%></p>
+            
+            <div class="item">
+                
+                <h2>Hello, <%=  user %> </h2>
 
-                  
-                    
+               <a href="/posters/new"><button >Add New Poster</button></a>
+                 
+               <div class="reports">
+                     <p>REPORTS:</p> 
+            
+                              <% for(let i=0; i < posters.length; i++) { 
+                                 
+                             const reports = posters[i].reports %>
+                             <p>reports for <%= posters[i].name %> <spam id="count"> <%= reports.length %> </spam> </p>
+                             <% for(let j=0; j < reports.length; j++) {
+                                
+                               %>
+                              
+                              <div class="message-card">
+                              <p ><span>From: </span><%= reports[j].name%></p>
+                              <p ><span>Message: </span><%= reports[j].message%></p>
+                              <p ><span>Contact Info: </span><%= reports[j].contactInfo%></p>
+                              </div>
+                            <% }
+                             } %> 
                
-                     <% }
-                } %> 
+                 </div>
             </div>
-            </div>
-            <div><a href="/posters/new"><button id="new-button">Add New Poster</button></a></div>
-        
-        
-
         </div>
 
 

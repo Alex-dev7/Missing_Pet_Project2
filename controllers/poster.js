@@ -70,19 +70,21 @@ router.post('/', (req, res) => {
 
 // Report route
 router.get('/:id/report', (req, res) => {
-    console.log(`----------------- ${req.params.id}`)
+    // console.log(`----------------- ${req.params.id}`)
     //getting the poster from database
     Poster.findById(req.params.id, (err, foundPoster) => {
         res.render('posters/report.ejs', {poster: foundPoster})
 
     })
 })
-router.put('/:id', (req, res) => {
+// router.put('/db/:id', (req, res) => {
 
-    Poster.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedPoster) => {
-        res.redirect(`/posters`)
-    })
-})
+//    // push new reports to the array
+
+//     Poster.findByIdAndUpdate(req.params.id, { $push: { reports: req.body  } }, {new: true}, (err, updatedPoster) => {
+//         res.redirect(`/posters`)
+//     })
+// })
 
 
 // EDIT route
@@ -106,11 +108,17 @@ router.get('/:id/edit', (req, res) => {
 
 router.put('/:id', (req, res) => {
 
-    // req.body.sex = req.body.sex === "on" ? true : false 
+    if(req.body.type) {
+            Poster.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedPoster) => {
+            res.redirect(`/posters/${req.params.id}`)
+            })
+    } else {
+        // push new reports to the array
+        Poster.findByIdAndUpdate(req.params.id, { $push: { reports: req.body  } }, {new: true}, (err, updatedPoster) => {
+                    res.redirect(`/posters`)
+                })
+    }
 
-    Poster.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedPoster) => {
-        res.redirect(`/posters/${req.params.id}`)
-    })
 })
 
 

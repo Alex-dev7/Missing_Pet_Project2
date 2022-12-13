@@ -6,17 +6,17 @@
     <%- include("../partials/header-login.ejs") %>
     <main>
       <div class="login-container">
-        <p>New User</p>
+       
         <form action="/user/signup" method="post">
+          <p>NEW USER</p>
           <fieldset>
-           
-            <label
-              >USERNAME: <input type="text" name="username" required />
+                       <label>
+                        <input type="text" name="username" required  placeholder="username"/>
             </label>
             <label
-              >PASSWORD: <input type="password" name="password" required />
+              ></label><input type="password" name="password" required placeholder="password"/>
             </label>
-            <input type="submit" value="Create Account" />
+            <input type="submit" value="Create" id="submit" class="submit" style="min-width: 100px !important;" />
           </fieldset>
         </form>
       </div>

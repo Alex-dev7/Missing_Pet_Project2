@@ -7,13 +7,13 @@
     <main>
         <div class="report-container">
 
-            <div class="report-poster">
-               <form  action="/posters/<%= poster._id%>?_method=PUT" method="POST">
+            <div>
+               <form  class="report-poster" action="/posters/<%= poster._id%>?_method=PUT" method="POST">
                     <label>Name: <input type="text" name="name"></label>
                      <label>Message: <input type="text" name="message"></label>
                      <label>Contact Info: <input type="text" name="contactInfo"></label>
                     
-                     <input type="submit" value="Send">
+                     <input type="submit" value="Send" id="submit">
             
             </form>
 

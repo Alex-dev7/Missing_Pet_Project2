@@ -3,10 +3,10 @@
 <%- include('../partials/head.ejs')  %> 
 <body>
     <%- include('../partials/header.ejs')  %> 
-    <a  href="/user/profile"><button id="back">&#10153;</button></a>
+    <a  href="/user/profile"><button id="back">	&#8678;</button></a>
     <h2 class="missing-text">Create a new MISSING poster</h2>
     <main>
-        <div class="">
+        <div class="form-div">
 
             <form action="/posters" method="POST">
                 <fieldset class="form-container">
@@ -14,12 +14,12 @@
                     <label>Name: <input type="text" name="name"></label>
                     <label>Location last seen: <input type="text" name="location"></label>
                     <label>Type: <input type="text" name="type"></label>
-                    <label>Sex: <br> <input type="radio" name="sex" value="Male">
-                                <label for="Male">Male</label><br>
+                    <label>Sex:  <input type="radio" name="sex" value="Male">
+                                <label for="Male">Male</label>
                                 <input type="radio" name="sex" value="Female">
-                                <label for="Female">Female</label><br>
+                                <label for="Female">Female</label>
                                 <input type="radio" name="sex" value="Unknown">
-                                <label for="Unknown">Unknown</label><br>
+                                <label for="Unknown">Unknown</label>
                     </label>
                     <label>Image Url: <input type="text" name="img"></label>
                     <label>Description: <input type="text" name="details"></label>
@@ -32,7 +32,7 @@
                     
                     <label>Owner's phone number: <input type="number" name="number"></label>
                     <input type="hidden" name="username" value="<%= user  %> ">
-                    <input type="submit" value="Create">
+                    <input id="submit" type="submit" value="Create">
 
 
                 </fieldset>

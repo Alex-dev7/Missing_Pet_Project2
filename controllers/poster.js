@@ -3,6 +3,7 @@ const express = require('express')
 const Poster = require('../models/posters')
 
 
+
 // route
 const router = express.Router()
 
@@ -46,8 +47,6 @@ router.get('/', (req, res) => {
 
 
 
-
-
 // NEW route
 router.get('/new', (req, res) => {
     res.render('posters/new.ejs', {user: req.session.username})
@@ -77,14 +76,7 @@ router.get('/:id/report', (req, res) => {
 
     })
 })
-// router.put('/db/:id', (req, res) => {
 
-//    // push new reports to the array
-
-//     Poster.findByIdAndUpdate(req.params.id, { $push: { reports: req.body  } }, {new: true}, (err, updatedPoster) => {
-//         res.redirect(`/posters`)
-//     })
-// })
 
 
 // EDIT route
@@ -98,7 +90,7 @@ router.get('/:id/edit', (req, res) => {
 
     })
        } else {
-            res.send('you are not authorized to edit this post')
+            res.send(`<dialog style="text-align: center" open>you are not authorized to edit this post<br><a href="/posters"><button >BACK</button></a></dialog>`)
        }
         // console.log(poster)
     })
@@ -149,7 +141,8 @@ router.get('/:id', (req, res) => {
                res.redirect('/posters')
             })
        } else {
-            res.send('you are not authorized to delete this post')
+            res.send(`<dialog style="text-align: center" open>you are not authorized to delete this post<br><a href="/posters"><button >BACK</button></a></dialog>`)
+
        }
         console.log(poster)
     })

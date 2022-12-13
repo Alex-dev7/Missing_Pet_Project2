@@ -11,6 +11,7 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo')
 
 
+
 // create express app
 const app = express()
 
@@ -26,6 +27,7 @@ app.use(session({
     saveUninitialized: true,
     resave: false,
 }))
+
 
 app.use('/posters', PosterRouter)
 app.use('/user', UserRouter)

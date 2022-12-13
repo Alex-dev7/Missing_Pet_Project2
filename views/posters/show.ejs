@@ -6,7 +6,7 @@
     
     <main>
         <div class="show-container">
-<h1>Please <a href="/posters/<%=poster._id%>/report"> <button>REPORT</button></a> if you have seen <%= poster.name  %> </h1>
+<h1>Please <a href="/posters/<%=poster._id%>/report"> <button class="edit-button">REPORT</button></a> if you have seen <%= poster.name  %> </h1>
             <div class="show-poster">
                 <div class="description">
                     <h2>Name: <span><%= poster.name  %> </span></h2>
@@ -23,10 +23,14 @@
                     <h2>Please call: <span><%= poster.number %> </span></h2>
                 </div>
             </div>
-            <a href="/posters/<%= poster._id %>/edit "><button>Edit</button></a>
-            <form action="/posters/<%= poster._id   %>?_method=DELETE" method="POST">
-                <input type="submit" value="Delete" id="form-button">
-           </form>
+            <div class="buttons-container">
+                <a  href="/posters/<%= poster._id %>/edit "><button class="edit-button">Edit</button></a>
+                <form action="/posters/<%= poster._id   %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete" class="delete-button">
+                </form>
+
+            </div>
+            
         </div>
     </main>
     <%- include('../partials/footer.ejs')  %> 

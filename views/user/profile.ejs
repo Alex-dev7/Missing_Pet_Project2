@@ -15,12 +15,13 @@
                <a href="/posters/new"><button >Add New Poster</button></a>
                  
                <div class="reports">
-                     <p>REPORTS:</p> 
+                     <p class="reports-header">REPORTS</p> 
             
                               <% for(let i=0; i < posters.length; i++) { 
                                  
                              const reports = posters[i].reports %>
-                             <p>reports for <%= posters[i].name %> <spam id="count"> <%= reports.length %> </spam> </p>
+                             <p> <%= posters[i].name %> <spam id="count"> <%= reports.length %> </spam> </p>
+                             <span id="avatar"><img src="<%= posters[i].img %>" alt=""></span>
                              <% for(let j=0; j < reports.length; j++) {
                                 
                                %>

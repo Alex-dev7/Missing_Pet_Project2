@@ -21,7 +21,9 @@
                                  
                              const reports = posters[i].reports %>
                              <p> <%= posters[i].name %> <spam id="count"> <%= reports.length %> </spam> </p>
-                             <span id="avatar"><img src="<%= posters[i].img %>" alt=""></span>
+                             <%  if(reports.length > 0){ %>
+                             <span id="avatar"><img src="<%= posters[i].img %>"></span>
+                             <% }%>
                              <% for(let j=0; j < reports.length; j++) {
                                 
                                %>

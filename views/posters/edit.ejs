@@ -3,12 +3,12 @@
 <%- include('../partials/head.ejs')  %> 
 <body>
     <%- include('../partials/header.ejs')  %> 
-    <h2>Create a new MISSING poster</h2>
+   
     <main>
-        <div class="form-container">
+        <div >
 
             <form action="/posters/<%= poster._id %>?_method=PUT" method="POST">
-                <fieldset>
+                <fieldset class="form-container" id="edit-form-container">
                     <p>Edit <%=poster.name  %>: </p>
                     <label>Name: <input type="text" name="name" value="<%= poster.name %>"></label>
                     <label>Location last seen: <input type="text" name="location" value="<%= poster.location %>"></label>
@@ -32,7 +32,7 @@
                     </label>
                     
                     <label>Owner's phone number: <input type="number" name="number" value="<%= poster.number %>"></label>
-                    <input type="submit" value="Update">
+                    <input type="submit" value="Update" id="submit">
 
 
                 </fieldset>

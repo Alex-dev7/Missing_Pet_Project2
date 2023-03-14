@@ -779,12 +779,35 @@ header{
     display:flex;
      flex-direction: column;
      width: 100%;
+     height: auto;
+     gap: 1rem;
+}
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: .2rem;
+    width: 90%;
+    margin:  0;
+    height: 100%;
+    /* overflow-y: scroll; */
+}
+.description h2 {
+   width: 80%;
+   margin: 1.3rem auto;
+   padding: .5rem 1rem;
+  
+}
+
+.show-img {
+    margin-top: 12rem;
 }
 .show-img img {
-    max-height: 500px;
+    max-height: 250px;
     max-width: 80%;
     object-fit: cover;
-    margin: .2rem auto;
+    margin: 2rem auto;
     border: 1px solid black;
 }
 .report-container{

@@ -3,8 +3,13 @@ body {
     width: 100vw;
     box-sizing: border-box;
     font-family: 'Readex Pro', sans-serif;
-
     
+    
+}
+main {
+    overflow-y:scroll ;
+    overflow-x: hidden;
+    height: 70vh;
 }
 header{
     width: 100%;
@@ -13,12 +18,13 @@ header{
     /* border: 1px solid black; */
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1683' height='400' preserveAspectRatio='none' viewBox='0 0 1683 400'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1707%26quot%3b)' fill='none'%3e%3crect width='1683' height='400' x='0' y='0' fill='rgba(24%2c 106%2c 59%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c403.026C74.727%2c384.933%2c146.031%2c368.152%2c215.709%2c335.649C295.726%2c298.323%2c395.848%2c277.719%2c436.57%2c199.375C477.435%2c120.756%2c445.193%2c24.8%2c421.688%2c-60.63C400.426%2c-137.906%2c350.376%2c-198.911%2c308.23%2c-267.083C257.112%2c-349.767%2c237.211%2c-465.272%2c147.857%2c-503.555C58.476%2c-541.85%2c-40.613%2c-483.454%2c-134.065%2c-456.582C-228.064%2c-429.552%2c-344.134%2c-426.796%2c-399.494%2c-346.163C-454.897%2c-265.468%2c-408.7%2c-156.439%2c-407.331%2c-58.565C-406.198%2c22.447%2c-409.29%2c99.901%2c-392.147%2c179.087C-370.799%2c277.699%2c-382.825%2c409.32%2c-295.209%2c459.354C-206.418%2c510.059%2c-99.378%2c427.088%2c0%2c403.026' fill='%23104526'%3e%3c/path%3e%3cpath d='M1683 815.817C1779.459 823.804 1878.935 882.442 1966.375 840.941 2054.814 798.9649999999999 2091.38 694.077 2129.486 603.903 2166.695 515.85 2209.424 419.992 2183.092 328.098 2157.4610000000002 238.649 2065.561 189.947 1993.87 130.63 1933.408 80.60300000000001 1871.017 37.321000000000026 1797.734 9.25200000000001 1719.028-20.894000000000005 1638.1-48.29199999999997 1554.491-37.661 1462.342-25.944000000000017 1378.828 16.341000000000008 1304.441 71.97699999999998 1215.335 138.62099999999998 1084.94 202.664 1084.396 313.93399999999997 1083.8319999999999 429.3 1235.028 480.055 1301.988 574.002 1352.487 644.8530000000001 1354.799 749.762 1428.259 796.385 1501.647 842.962 1596.375 808.644 1683 815.817' fill='%23208f50'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1707'%3e%3crect width='1683' height='400' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
     background-size: cover;
+    border-bottom: 2px solid black; 
 }
 .nav-container{  
     width: 100%;
     height: 25%;
   
-    background-color: rgba(50, 50, 233, 0.149);
+    background-color: rgba(192, 192, 238, 0.149);
     display: flex;
     
     align-items: center;
@@ -116,9 +122,10 @@ header{
     padding: 3rem;
     height: auto;
     display: flex;
-    background-color:  rgb(220, 216, 216);
-    border-radius: 35px;
-    box-shadow: -1px 2px 16px 4px #000;
+    background-color:  rgba(38, 128, 62, 0.232);
+    /* border: 1px dotted black; */
+    /* border-radius: 35px;
+    box-shadow: -1px 2px 16px 4px #000; */
     flex-direction: row;
     flex-wrap: wrap;
     gap: 3rem;
@@ -127,50 +134,49 @@ header{
 }
 .poster-cell {
     position: relative;
-    padding: 1rem;
-    height: 430px;
-    max-width: 290px;
-    border: 1px solid black;
-    background: rgb(228,175,43);
-    background: radial-gradient(circle, rgba(228,175,43,1) 31%, rgb(255, 157, 0) 100%);
+    padding: 1rem ;
+    height: 380px;
+    width: 280px;
+    border: 1px solid rgb(95, 96, 97);
+    background: rgb(92, 86, 72);
+    background: radial-gradient(circle, rgb(100, 97, 92) 31%, rgb(39, 38, 37) 100%);
     flex-direction: row;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
     font-size: 1.8rem;
-    
+    box-shadow: -3px 3px 3px 0px #4d4c4cc3; 
 }
 .poster-cell h3 {
-    width: 95%;
+    width: 100%;
     height: 10%;
     color: white;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
     padding: 1rem;
 }
 .poster-cell img {
     padding: 1rem;
-    height: 80%;
-    width: 100%;
+    height: 50%;
+    width: 90%;
     object-fit: cover;
     transition: .5s ease;
-    border-radius: 10%;
-   
 }
-.view {
-    font-size: 1.1rem;
-    border-radius: 6%;
+.poster-cell .view {
+    font-size: 1.4rem;
     transition: .5s ease;
     opacity: 0;
-    max-width: 90%;
-    min-height: 62%;
+    min-width: 80%;
+    height: 50%;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -44.5%);
-  
-    
-    background-color: rgba(3, 3, 3, 0.704);
+    /* padding: 20px auto; */
+    background-color: rgba(198, 60, 5, 0.47);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,17 +185,29 @@ header{
   .poster-cell:hover .view{
     opacity: 1;
     color:white;
+    font-size: 1.6rem;
+    
   }
+.poster-cell div{
   
-.poster-cell div {
-  height: 10%;
-  width: 100%;
   text-align: center;
-  padding-top: .1rem;
-  color: rgb(0, 42, 5);
+  color: rgb(210, 210, 210);
+  border: 1px solid white;
+  font-size: 1.4rem;
+  background-color: #7d666676;
 }
-.poster-cell div:hover {
-    color: red;
+.poster-cell div:hover
+.poster-cell div a:hover {
+    background-color: #a02121;
+}
+
+.poster-cell .report {
+   font-size: 1.1rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+   padding: .5rem 1rem;
+
 }
 
 
@@ -197,7 +215,7 @@ header{
 /* show page */
 .show-container {
    width: 100%;
-   height: 100%;
+   height: 60vh;
 }
 .show-container h1 {
     text-align: center;
@@ -207,14 +225,13 @@ header{
 .show-poster {
     padding:1rem;
     border: 1px solid rgb(76, 1, 1);
-    background: rgb(5,62,108);
-background: linear-gradient(90deg, rgba(5,62,108,1) 0%, rgba(32,133,176,1) 100%);
+    background-color: #21a063;
     width: 60%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     font-size: 1.2rem;
-
+    max-height: 40vh;
 }
 .description {
     display: flex;
@@ -222,6 +239,7 @@ background: linear-gradient(90deg, rgba(5,62,108,1) 0%, rgba(32,133,176,1) 100%)
     justify-content: center;
     align-items: flex-start;
     line-height: 2rem;
+    /* overflow-y: scroll; */
 }
 .description h2 {
    border-bottom: .25px solid rgb(0, 0, 0);
@@ -249,14 +267,14 @@ background: linear-gradient(90deg, rgba(5,62,108,1) 0%, rgba(32,133,176,1) 100%)
     font-family: 'Holtwood One SC', serif;
 }
 .show-img img {
-    max-height: 500px;
-    max-width: 90%;
+    max-height: 280px;
+    width: 250px;
     object-fit: cover;
     margin: 1rem;
     border: 1px solid black;
 }
 .buttons-container {
-    margin: 2rem;
+    margin: 1rem;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -268,9 +286,9 @@ background: linear-gradient(90deg, rgba(5,62,108,1) 0%, rgba(32,133,176,1) 100%)
 /* profile */
 
 .profile-container {
-    margin: 5rem auto;
+    margin: 1rem auto;
     width: 60%;
-    height: auto;
+   max-height: 500px;
     border: 1px solid black;
     border-radius: 18px;
     padding: 3rem;
@@ -280,7 +298,7 @@ background: linear-gradient(90deg, rgba(5,62,108,1) 0%, rgba(32,133,176,1) 100%)
 .item {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 2rem;
     align-items: center;
    justify-content: space-between;
 }
@@ -371,15 +389,16 @@ background: linear-gradient(90deg, rgba(5,62,108,1) 0%, rgba(32,133,176,1) 100%)
 /* show page */
 .form-div {
     width: 40%;
-    margin: 5rem auto;
+    margin: 2rem auto;
 }
 .form-container, .report-poster {
-    margin: 5rem auto;
+    margin: 1rem auto;
     width: auto;
-    height: auto;
+    height: 50vh;
+    overflow-y: scroll;
     border: 1px solid black;
     border-radius: 18px;
-    padding: 10%;
+    padding: 1rem;
    background-color:#12641aa7;
    display: flex;
    flex-direction: column;
@@ -534,17 +553,18 @@ background: linear-gradient(90deg, rgba(5,62,108,1) 0%, rgba(32,133,176,1) 100%)
 
 .footer-container {
     width: 100% ;
-    height: 15vh;
+    height: 11vh;
     color: white;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    /* background: linear-gradient(360deg, rgba(0, 62, 14, 0.81) 0%, rgba(49, 95, 32, 0.73) 100%); */
-    background: rgb(34,193,195);
-    background: linear-gradient(96deg, rgba(34,193,195,1) 0%, rgba(253,176,45,1) 100%);
+    background-color: #084c57c1;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-top: 2px solid black; 
+    position: absolute;
+    bottom: 0%;
 }
 .footer-container div {
-    border-right:1px solid rgb(255, 255, 255);
+    border-right:5px solid rgb(255, 255, 255);
 }
 .logo-section {
   display: flex;
@@ -569,21 +589,31 @@ background: linear-gradient(90deg, rgba(5,62,108,1) 0%, rgba(32,133,176,1) 100%)
    align-items: center;
    justify-content: center;
 }
+.git a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+.git a:hover {
+    text-decoration: underline;
+}
 
 @media (max-width: 768px) {
    
     body{
         max-width: 100vw;
+        height: auto;
         overscroll-behavior-inline: contain;
         overscroll-behavior-block: contain;
     }
-    .nav-container {
-        margin-top: 0;
-        height: 13%;
+    main {
+        height: auto;
+        background-color:#21a0638d;
     }
+
     .hamburger {
      display: block;
-     margin-right: 2rem;
+     margin-right: 2.5rem;
      position: fixed;
      z-index: 111111;
     }
@@ -609,47 +639,47 @@ background: linear-gradient(90deg, rgba(5,62,108,1) 0%, rgba(32,133,176,1) 100%)
       left: 0;
       top: -120%;
       height: 100vh;
-     
       background-color: #77abbeec;
       width: 100%;
       text-align: center;
       transition: 0.3s;
       z-index: 1111;
-    flex-direction: column;
+      flex-direction: column;
       
     }
     #logout-button{
         margin: 0;
     }
-    /* .nav-link {
-     
-    } */
     .nav-item {
         margin: 16px 0;
     }
     .nav-menu.active {
         top: 0;
     }
-    header {
+    /* header {
         height: 80vh;
-    }
+    } */
     .banner-container {
         width: 100%;
-        height: 75%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
     }
     .banner-container h1 {
-        margin-top: 4rem;
+        margin-top: 6vh;
         width: auto;
         padding-left: 1rem ;
-        font-size: 3rem;
+        font-size: 2rem;
+        
     }
-    .logo-img {
-        margin: 1rem auto 4rem auto;
-        max-height: 5rem;
+    .logo-img{
+        margin: 0;
+        height: auto;
+    }
+    .logo-img img {
+        margin: 0 auto;
+        height: 100px;
         
     }
     .text {
@@ -666,43 +696,30 @@ background: linear-gradient(90deg, rgba(5,62,108,1) 0%, rgba(32,133,176,1) 100%)
 
     .bulletin-container {
         margin: 0 ;
-        padding: 0 3rem 0 0rem;
-        height: 90vh;
+        padding:  1rem 1rem;
+        height: 50vh;
         width: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
         border: 0;
         border-radius: 0;
-        display: grid;
         background-color: rgba(146, 146, 146, 0.493);
-        grid-auto-flow: column;
-        grid-auto-columns: 100%;
-        gap: 3rem;
-        /* grid-template-rows: min-content; */
-        
+        gap: 1rem;
         overflow-x: scroll;
-        overscroll-behavior-inline: a;
-    }
-    .snaps-inline {
-        scroll-snap-type: inline mandatory;
-        scroll-padding-inline: 1rem;
-    }
-    .snaps-inline > * {
-        scroll-snap-align: end;
-        
     }
     .poster-cell {
         position: relative;
         padding: 1rem;
-        height: 430px;
-        min-width: 90vw;
+        height: 330px;
+        min-width: 80vw;
         border: 1px solid black;
         background: rgb(228,175,43);
         background: radial-gradient(circle, rgba(228,175,43,1) 31%, rgb(255, 157, 0) 100%);
-        
         display: flex;
-        
         flex-direction: column;
         align-items: center;
-       
         text-decoration: none;
         font-size: 1.8rem;
         
@@ -710,26 +727,27 @@ background: linear-gradient(90deg, rgba(5,62,108,1) 0%, rgba(32,133,176,1) 100%)
 
 
 .footer-container {
-    overflow-y: hidden;
     width: auto;
     padding: 1rem;
     height: auto;
     display: flex;
     flex-direction: column;
     max-width: 100vw;
-    
+    position: unset;
 }
 .footer-container div {
     border-bottom:1px solid rgb(255, 255, 255);
     padding: 1rem ;
 }
-#header{
+header{
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 30vh;
   }
-  #nav {
-    height: 7vh;
+  .nav-container {
+    position: absolute;
+    height:7vh;
+    background-color: #00000000;
   }
   #banner {
       display: block;
